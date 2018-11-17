@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { SwMovie } from './sw-movies.model';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { UtilitiesService } from '../_utilities/utilities.service';
 import { SwCharactersService } from '../sw-characters/sw-characters.service';
