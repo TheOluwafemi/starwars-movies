@@ -14,6 +14,8 @@ import { SwCharactersComponent } from './sw-characters/sw-characters.component';
 import { LoaderComponent } from './loader/loader.component';
 import { SwMoviesService } from './sw-movies/sw-movies.service';
 import { ErrorNotificationComponent } from './error-notification/error-notification.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { ErrorNotificationComponent } from './error-notification/error-notificat
     MDBBootstrapModule.forRoot(),
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],
